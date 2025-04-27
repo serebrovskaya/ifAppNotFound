@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s ease;
+    background-color: CCCAC3;
 }
 
 .container {
@@ -14,8 +14,13 @@ body {
 
 h1 {
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
+h2 {
+    color: #333;
+    margin-bottom: 50px;
+}
+
 
 .buttons {
     display: flex;
@@ -29,10 +34,10 @@ h1 {
     padding: 20px 40px;
     font-size: 20px;
     border: none;
-    border-radius: 50px; 
+    border-radius: 50px; /* Увеличиваем для круглых краёв */
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 255px; 
+    width: 255px; /* Фиксированная ширина для всех кнопок */
     text-align: center;
 }
 
@@ -48,10 +53,10 @@ h1 {
 
 #install {
     background-color: #FFFFFF;
-    color: white;
+    color: 000000;
 }
 
 #cite {
     background-color: #FFDD2D;
-    color: white;
+    color: 000000;
 }
