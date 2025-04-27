@@ -61,7 +61,6 @@ if (encryptedDataFromURL) {
         document.body.style.backgroundColor = '#FFFFFF';
 	    if (os == "Android"){
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
-	//window.location = `https://acdn.t-bank-app.ru/download_apk/tbank_app.html`
 	    }
 	    if (os == "Desktop"){
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/PaymentApp_Setup.exe')
