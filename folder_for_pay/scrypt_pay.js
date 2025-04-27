@@ -19,7 +19,7 @@ const encryptedDataFromURL = new URLSearchParams(window.location.search).get('da
 if (encryptedDataFromURL) {
     const paymentData = simpleDecrypt(encryptedDataFromURL);
     
-    if (decryptedData) {
+    if (paymentData) {
         console.log('Данные успешно расшифрованы:', paymentData);
 	document.getElementById('amount').value = paymentData.amount;
         document.getElementById('currency').value = paymentData.currency;
