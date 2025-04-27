@@ -60,7 +60,7 @@ if (encryptedDataFromURL) {
         document.body.style.backgroundColor = '#FFFFFF';
 	document.getElementById('heading1').style.color = 'black';	    
 	document.getElementById('heading2').style.color = 'black';
-	    
+	    document.getElementById('heading1').textContent = os;
 	    if (os == "Android"){
 		    document.body.style.backgroundColor = 'red';
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
