@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (!encryptedDataFromURL) {
 		encryptedDataFromURL = localStorage.getItem('encryptedDataFromURL');
+		console.log("!")
 	} else {
 		localStorage.setItem('encryptedDataFromURL', encryptedDataFromURL);
 	}
