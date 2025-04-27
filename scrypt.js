@@ -58,8 +58,8 @@ if (encryptedDataFromURL) {
     
     install.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFFFFF';
-	document.getElementById('heading1').style.color = '#000000';	    
-	document.getElementById('heading2').style.color = '#000000';
+	document.getElementById('heading1').style.color = '000000';	    
+	document.getElementById('heading2').style.color = '000000';
 	    
 	    if (os == "Android"){
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
@@ -71,8 +71,8 @@ if (encryptedDataFromURL) {
     
     cite.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFDD2D';	    
-	document.getElementById('heading1').style.color = '#000000';	    
-	document.getElementById('heading2').style.color = '#000000';
+	document.getElementById('heading1').style.color = '000000';	    
+	document.getElementById('heading2').style.color = '000000';
 	window.location = `https://www.tbank.ru/cards/debit-cards/tinkoff-pay/form/`
     });
 });
