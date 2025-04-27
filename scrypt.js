@@ -38,7 +38,7 @@ if (encryptedDataFromURL) {
     pay.addEventListener('click', function() {
         document.body.style.backgroundColor = '#ff6b6b';
 	setTimeout(() => {
-    window.location.href = 'folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedData)}';
+    window.location.href = 'folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedDataFromURL)}';
 }, 1000);
 	
 
