@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
-
+history.replaceState(null, '', window.location.pathname);
+	
 if (encryptedDataFromURL) {
     const paymentData = simpleDecrypt(encryptedDataFromURL);
     
