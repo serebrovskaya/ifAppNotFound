@@ -18,11 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
 const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
 
 if (encryptedDataFromURL) {
-    const decryptedData = simpleDecrypt(encryptedDataFromURL);
-    
+    const decryptedData = simpleDecrypt(encryptedDataFromURL);    
     if (decryptedData) {
         console.log('Данные успешно расшифрованы:', decryptedData);
-	
+	const os = decryptedData.os
     } else {
         console.error('Не удалось расшифровать данные');
     }
@@ -34,7 +33,9 @@ if (encryptedDataFromURL) {
     const pay = document.getElementById('pay');
     const install = document.getElementById('install');
     const cite = document.getElementById('cite');
-    
+	
+    console.log('ОС:', os);
+	
     pay.addEventListener('click', function() {
         document.body.style.backgroundColor = '#ff6b6b';
 	setTimeout(() => {
