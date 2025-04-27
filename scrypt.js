@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 2. Преобразуем в URI-кодированную строку
         const uriEncodedData = decodeURIComponent(escape(decodedData));
         
-        return uriEncodedData;
+        return JSON.parse(uriEncodedData);
     } catch (e) {
         console.error('Ошибка расшифровки:', e);
         return null;
