@@ -1,13 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-	function getUrlParams() {
-                const params = new URLSearchParams(window.location.search);
-                return {
-                    data: params.get('data') // Получаем параметр 'data'
-                };
-            }
+	
+	function simpleDecrypt(encryptedData) {
+    try {
+        // 1. Декодируем из Base64
+        const decodedData = atob(encryptedData);
+        
+        // 2. Преобразуем в URI-кодированную строку
+        const uriEncodedData = decodeURIComponent(escape(decodedData));
+        
+        return uriEncodedData;
+    } catch (e) {
+        console.error('Ошибка расшифровки:', e);
+        return null;
+    }
+}
 
-            // Получаем параметры из URL
-            const urlParams = getUrlParams();
+const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
+
+if (encryptedDataFromURL) {
+    const decryptedData = simpleDecrypt(encryptedDataFromURL);
+    
+    if (decryptedData) {
+        console.log('Данные успешно расшифрованы:', decryptedData);
+    } else {
+        console.error('Не удалось расшифровать данные');
+    }
+}
 	const receivedData = urlParams.data;
 
             if (receivedData) {
