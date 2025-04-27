@@ -11,7 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
     		    }
       	}
 
-const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
+
+	
+const savedData = localStorage.getItem('encryptedDataFromURL');
+let encryptedDataFromURL;
+if (savedData) {
+  encryptedDataFromURL = savedData
+}
+	else{
+	encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
+	localStorage.setItem('encryptedDataFromURL', encryptedDataFromURL);		
+	}
+	
 history.replaceState(null, '', window.location.pathname);
 let os = "";
 if (encryptedDataFromURL) {
