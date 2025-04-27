@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
 history.replaceState(null, '', window.location.pathname);
-	
+let os;
 if (encryptedDataFromURL) {
     const decryptedData = simpleDecrypt(encryptedDataFromURL);    
     if (decryptedData) {
         console.log('Данные успешно расшифрованы:', decryptedData);
-	const os = decryptedData.os
+	os = decryptedData.os
     } else {
         console.error('Не удалось расшифровать данные');
     }
