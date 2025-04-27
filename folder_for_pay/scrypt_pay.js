@@ -1,38 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-	function getUrlParams() {
-                const params = new URLSearchParams(window.location.search);
-                return {
-                    data: params.get('data') // Получаем параметр 'data'
-                };
-            }
+	function simpleDecrypt(encryptedData) {
+    try {
+        // 1. Декодируем из Base64
+        const decodedData = atob(encryptedData);
+        
+        // 2. Преобразуем в URI-кодированную строку
+        const uriEncodedData = decodeURIComponent(escape(decodedData));
+        
+        return JSON.parse(uriEncodedData);
+    } catch (e) {
+        console.error('Ошибка расшифровки:', e);
+        return null;
+    }
+}
 
-            // Получаем параметры из URL
-            const urlParams = getUrlParams();
-	const encryptedData = urlParams.data;
+const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
 
-            if (encryptedData) {
-        try {
-            // Декодируем и расшифровываем данные
-            const decodedData = decodeURIComponent(encryptedData);
-            const paymentData = simpleDecrypt(decodedData);
-
-            if (paymentData && paymentData.amount && paymentData.currency) {
-                // Отображаем данные в полях ввода
-                document.getElementById('amount').value = paymentData.amount;
-                document.getElementById('currency').value = paymentData.currency;
-            } else {
-                console.error("Неверный формат данных");
-                document.getElementById('amount').value = "Ошибка";
-                document.getElementById('currency').value = "Неверные данные";
-            }
-        } catch (e) {
-            console.error("Ошибка обработки данных:", e);
-            document.getElementById('amount').value = "Ошибка";
-            document.getElementById('currency').value = "Не удалось расшифровать";
-        }
+if (encryptedDataFromURL) {
+    const paymentData = simpleDecrypt(encryptedDataFromURL);
+    
+    if (decryptedData) {
+        console.log('Данные успешно расшифрованы:', paymentData);
+	document.getElementById('amount').value = paymentData.amount;
+        document.getElementById('currency').value = paymentData.currency;
     } else {
+        console.error('Не удалось расшифровать данные');
+	document.getElementById('amount').value = "Ошибка";
+        document.getElementById('currency').value = "Не удалось расшифровать";
+    }
+} else {
         console.log("Данные не получены");
-        document.getElementById('amount').value = "Нет данных";
+	document.getElementById('amount').value = "Нет данных";
         document.getElementById('currency').value = "Нет данных";
     }
 });
