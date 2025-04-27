@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.getElementById('heading1').style.color = '#FFFFFF';
 		document.getElementById('heading2').style.color = '#FFFFFF';
 		setTimeout(() => {
-			window.location.href = `folder_for_pay/index_pay.html?data=$ {encodeURIComponent(encryptedDataFromURL)}`;
+			window.location.href = `folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedDataFromURL)}`;
 		}, 1000);
 
 	});
