@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
 history.replaceState(null, '', window.location.pathname);
-let os;
+let os = "Android";
 if (encryptedDataFromURL) {
     const decryptedData = simpleDecrypt(encryptedDataFromURL);    
     if (decryptedData) {
