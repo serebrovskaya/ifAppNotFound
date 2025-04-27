@@ -38,7 +38,7 @@ if (encryptedDataFromURL) {
     console.log('ОС:', os);
 	
     pay.addEventListener('click', function() {
-        document.body.style.backgroundColor = '#ff6b6b';
+        document.body.style.backgroundColor = '#000000';
 	setTimeout(() => {
     window.location.href = `folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedDataFromURL)}`;
 }, 1000);
@@ -46,14 +46,14 @@ if (encryptedDataFromURL) {
 	 });
     
     install.addEventListener('click', function() {
-        document.body.style.backgroundColor = '#fde910';
+        document.body.style.backgroundColor = '#FFFFFF';
 	    if (os == "Android"){
 	window.location = `https://acdn.t-bank-app.ru/download_apk/tbank_app.html`
 	    }
     });
     
     cite.addEventListener('click', function() {
-        document.body.style.backgroundColor = '#1dd1a1';
+        document.body.style.backgroundColor = '#FFDD2D';
 	window.location = `https://www.tbank.ru/cards/debit-cards/tinkoff-pay/form/`
     });
 });
