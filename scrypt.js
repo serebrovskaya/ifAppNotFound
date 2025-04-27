@@ -25,7 +25,10 @@ if (encryptedDataFromURL) {
     } else {
         console.error('Не удалось расшифровать данные');
     }
-}
+} else {
+        console.log("Данные не получены");
+    }
+
 
     const pay = document.getElementById('pay');
     const install = document.getElementById('install');
