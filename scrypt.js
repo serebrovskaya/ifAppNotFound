@@ -13,15 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	
-const savedData = localStorage.getItem('encryptedDataFromURL');
-let encryptedDataFromURL;
-if (savedData) {
-  encryptedDataFromURL = savedData
+let encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
+
+if (!encryptedDataFromURL) {
+  encryptedDataFromURL = localStorage.getItem('encryptedDataFromURL');
+} else {
+  localStorage.setItem('encryptedDataFromURL', encryptedDataFromURL);
 }
-	else{
-	encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
-	localStorage.setItem('encryptedDataFromURL', encryptedDataFromURL);		
-	}
 	
 history.replaceState(null, '', window.location.pathname);
 let os = "";
