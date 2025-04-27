@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
 	function simpleDecrypt(encryptedData) {
-    try {
-        // 1. Декодируем из Base64
-        const decodedData = atob(encryptedData);
-        
-        // 2. Преобразуем в URI-кодированную строку
-        const uriEncodedData = decodeURIComponent(escape(decodedData));
-        
-        return JSON.parse(uriEncodedData);
-    } catch (e) {
-        console.error('Ошибка расшифровки:', e);
-        return null;
-    }
-}
+		try {
+        		const decodedData = atob(encryptedData);
+        		const uriEncodedData = decodeURIComponent(escape(decodedData));
+        		return JSON.parse(uriEncodedData);
+    		    } catch (e) {
+        	    console.error('Ошибка расшифровки:', e);
+        	    return null;
+    		    }
+      	}
 
 const encryptedDataFromURL = new URLSearchParams(window.location.search).get('data');
 history.replaceState(null, '', window.location.pathname);
