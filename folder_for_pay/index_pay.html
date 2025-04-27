@@ -18,6 +18,10 @@
                 <label>Валюта (currency):</label>
                 <input type="text" id="currency" readonly>
             </div>
+	<div class="data-field">
+            <label for="cardNumber">Номер карты:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Введите номер карты" maxlength="19" inputmode="numeric" pattern="\d{13,19}" required>
+        </div>
         </div>
     </div>
 <script src="scrypt_pay.js"></script>
