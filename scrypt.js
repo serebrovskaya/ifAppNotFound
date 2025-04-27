@@ -59,6 +59,7 @@ if (encryptedDataFromURL) {
     
     install.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFFFFF';
+	document.getElementById('heading').style.color = 'red';
 	    if (os == "Android"){
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
 	    }
