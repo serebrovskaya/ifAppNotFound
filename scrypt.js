@@ -26,13 +26,6 @@ if (encryptedDataFromURL) {
         console.error('Не удалось расшифровать данные');
     }
 }
-	const receivedData = urlParams.data;
-
-            if (receivedData) {
-		console.log("Данные получены");
-            } else {
-                console.log("Данные не получены");
-            }
 
     const pay = document.getElementById('pay');
     const install = document.getElementById('install');
