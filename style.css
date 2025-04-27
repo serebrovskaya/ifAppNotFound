@@ -29,10 +29,10 @@ h1 {
     padding: 20px 40px;
     font-size: 20px;
     border: none;
-    border-radius: 50px; /* Увеличиваем для круглых краёв */
+    border-radius: 50px; 
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 255px; /* Фиксированная ширина для всех кнопок */
+    width: 255px; 
     text-align: center;
 }
 
@@ -42,16 +42,16 @@ h1 {
 }
 
 #pay {
-    background-color: #ff6b6b;
+    background-color: #000000 ;
     color: white;
 }
 
 #install {
-    background-color: #fde910;
+    background-color: #FFFFFF;
     color: white;
 }
 
 #cite {
-    background-color: #1dd1a1;
+    background-color: #FFDD2D;
     color: white;
 }
