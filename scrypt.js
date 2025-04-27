@@ -35,8 +35,8 @@ if (encryptedDataFromURL) {
 	
     pay.addEventListener('click', function() {
         document.body.style.backgroundColor = '#000000';    
-	document.getElementById('heading').style.color = '#FFFFFF';	    
-	document.getElementById('heading').style.color = '#FFFFFF';
+	document.getElementById('heading1').style.color = '#FFFFFF';	    
+	document.getElementById('heading2').style.color = '#FFFFFF';
 	setTimeout(() => {
     window.location.href = `folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedDataFromURL)}`;
 }, 1000);
@@ -61,8 +61,8 @@ if (encryptedDataFromURL) {
     
     install.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFFFFF';
-	document.getElementById('heading').style.color = '#000000';	    
-	document.getElementById('heading').style.color = '#000000';
+	document.getElementById('heading1').style.color = '#000000';	    
+	document.getElementById('heading2').style.color = '#000000';
 	    
 	    if (os == "Android"){
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
@@ -74,8 +74,8 @@ if (encryptedDataFromURL) {
     
     cite.addEventListener('click', function() {
         document.body.style.backgroundColor = '#FFDD2D';	    
-	document.getElementById('heading').style.color = '#FFFFFF';	    
-	document.getElementById('heading').style.color = '#FFFFFF';
+	document.getElementById('heading1').style.color = '#FFFFFF';	    
+	document.getElementById('heading2').style.color = '#FFFFFF';
 	window.location = `https://www.tbank.ru/cards/debit-cards/tinkoff-pay/form/`
     });
 });
