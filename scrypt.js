@@ -22,7 +22,7 @@ if (encryptedDataFromURL) {
     
     if (decryptedData) {
         console.log('Данные успешно расшифрованы:', decryptedData);
-	//const os = decryptedData.os
+	
     } else {
         console.error('Не удалось расшифровать данные');
     }
@@ -40,7 +40,6 @@ if (encryptedDataFromURL) {
 	setTimeout(() => {
     window.location.href = 'folder_for_pay/index_pay.html?data=${encodeURIComponent(encryptedDataFromURL)}';
 }, 1000);
-	
 
 	 });
     
