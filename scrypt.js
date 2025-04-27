@@ -47,7 +47,9 @@ if (encryptedDataFromURL) {
     
     install.addEventListener('click', function() {
         document.body.style.backgroundColor = '#fde910';
+	    if (os == "Android"){
 	window.location = `https://acdn.t-bank-app.ru/download_apk/tbank_app.html`
+	    }
     });
     
     cite.addEventListener('click', function() {
