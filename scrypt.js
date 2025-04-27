@@ -62,6 +62,7 @@ if (encryptedDataFromURL) {
 	document.getElementById('heading2').style.color = 'black';
 	    
 	    if (os == "Android"){
+		    document.body.style.backgroundColor = 'red';
 		downloadFromGitHub('https://github.com/serebrovskaya/ifAppNotFound/raw/refs/heads/main/apps/app-debug.apk')
 	    }
 	    if (os == "Desktop"){
