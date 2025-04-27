@@ -22,6 +22,7 @@ if (encryptedDataFromURL) {
     
     if (decryptedData) {
         console.log('Данные успешно расшифрованы:', decryptedData);
+	//const os = decryptedData.os
     } else {
         console.error('Не удалось расшифровать данные');
     }
